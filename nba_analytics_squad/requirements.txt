@@ -1,7 +1,0 @@
-streamlit
-crewai==0.100.1
-crewai-tools
-nba_api
-pandas==2.2.2
-python-dotenv
-google-generativeai
