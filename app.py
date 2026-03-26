@@ -12,6 +12,10 @@ from pathlib import Path
 import streamlit as st
 from dotenv import load_dotenv
 
+# Força o sistema a ler a chave do Streamlit antes de chamar os agentes
+if "GEMINI_API_KEY" in st.secrets:
+    os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
+
 # ── Carregar .env antes de qualquer import que use a key ──
 env_path = Path(__file__).resolve().parent / ".env"
 load_dotenv(dotenv_path=env_path)
